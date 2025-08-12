@@ -1,4 +1,5 @@
-import type { AxisModel } from "@syncfusion/ej2-react-charts";
+import type { AxisModel } from "@syncfusion/ej2-react-charts"
+import { formatDate } from "lib/utils"
 
 export const sidebarItems = [
   {
@@ -19,7 +20,7 @@ export const sidebarItems = [
     label: "AI Trips",
     href: "/trips",
   },
-];
+]
 
 export const chartOneData: object[] = [
   {
@@ -58,7 +59,7 @@ export const chartOneData: object[] = [
     y2: 2.8,
     y3: 2.5,
   },
-];
+]
 
 export const travelStyles = [
   "Relaxed",
@@ -67,7 +68,7 @@ export const travelStyles = [
   "Cultural",
   "Nature & Outdoors",
   "City Exploration",
-];
+]
 
 export const interests = [
   "Food & Culinary",
@@ -79,64 +80,153 @@ export const interests = [
   "Photography Spots",
   "Shopping",
   "Local Experiences",
-];
+]
 
-export const budgetOptions = ["Budget", "Mid-range", "Luxury", "Premium"];
+export const budgetOptions = ["Budget", "Mid-range", "Luxury", "Premium"]
 
-export const groupTypes = ["Solo", "Couple", "Family", "Friends", "Business"];
+export const groupTypes = ["Solo", "Couple", "Family", "Friends", "Business"]
 
-export const footers = ["Terms & Condition", "Privacy Policy"];
+export const footers = ["Terms & Condition", "Privacy Policy"]
 
 export const selectItems = [
   "groupType",
   "travelStyle",
   "interest",
   "budget",
-] as (keyof TripFormData)[];
+] as (keyof TripFormData)[]
 
 export const comboBoxItems = {
   groupType: groupTypes,
   travelStyle: travelStyles,
   interest: interests,
   budget: budgetOptions,
-} as Record<keyof TripFormData, string[]>;
+} as Record<keyof TripFormData, string[]>
 
-export const userXAxis: AxisModel = { valueType: "Category", title: "Day" };
+export const userXAxis: AxisModel = { valueType: "Category", title: "Day" }
 export const useryAxis: AxisModel = {
   minimum: 0,
   maximum: 10,
   interval: 2,
   title: "Count",
-};
+}
 
 export const tripXAxis: AxisModel = {
   valueType: "Category",
   title: "Travel Styles",
   majorGridLines: { width: 0 },
-};
+}
 
 export const tripyAxis: AxisModel = {
   minimum: 0,
   maximum: 10,
   interval: 2,
   title: "Count",
-};
+}
 
 export const CONFETTI_SETTINGS = {
   particleCount: 200, // Number of confetti pieces
   spread: 60, // Spread of the confetti burst
   colors: ["#ff0", "#ff7f00", "#ff0044", "#4c94f4", "#f4f4f4"], // Confetti colors
   decay: 0.95, // Gravity decay of the confetti
-};
+}
 
 export const LEFT_CONFETTI = {
   ...CONFETTI_SETTINGS,
   angle: 45, // Direction of the confetti burst (90 degrees is top)
   origin: { x: 0, y: 1 }, // Center of the screen
-};
+}
 
 export const RIGHT_CONFETTI = {
   ...CONFETTI_SETTINGS,
   angle: 135,
   origin: { x: 1, y: 1 },
-};
+}
+
+export const dashboardStats = {
+  totalUsers: 12450,
+  usersJoined: {
+    currentMonth: 218,
+    lastMonth: 176,
+  },
+  totalTrips: 3210,
+  tripsCreated: {
+    currentMonth: 150,
+    lastMonth: 250,
+  },
+  userRole: {
+    total: 62,
+    currentMonth: 25,
+    lastMonth: 15,
+  },
+}
+
+export const allTrips = [
+  {
+    id: 1,
+    name: "Tropical Rewind",
+    imageUrls: ["/assets/images/sample1.jpg"],
+    itinerary: [{ location: "Thailand" }],
+    tags: ["Adventure", "Culture"],
+    travelStyle: "Solo",
+    estimatedPrice: "$1,000",
+  },
+  {
+    id: 2,
+    name: "French Reverie",
+    imageUrls: ["/assets/images/sample2.jpg"],
+    itinerary: [{ location: "Paris" }],
+    tags: ["Relaxation", "Culinary"],
+    travelStyle: "Family",
+    estimatedPrice: "$2,000",
+  },
+  {
+    id: 3,
+    name: "Zen Break",
+    imageUrls: ["/assets/images/sample3.jpg"],
+    itinerary: [{ location: "Japan" }],
+    tags: ["Shopping", "Luxury"],
+    travelStyle: "Couple",
+    estimatedPrice: "$3,000",
+  },
+  {
+    id: 4,
+    name: "Adventure in Westeros",
+    imageUrls: ["/assets/images/sample4.jpg"],
+    itinerary: [{ location: "Croatia" }],
+    tags: ["Historical", "Culture"],
+    travelStyle: "Friends",
+    estimatedPrice: "$4,000",
+  },
+]
+
+export const user = { name: "John Doe" }
+
+export const users = [
+  {
+    id: 1,
+    name: "John Doe",
+    email: "john.doe@example.com",
+    imageUrl: "/assets/images/david.webp",
+    dateJoined: formatDate("2025-01-01"),
+    itineraryCreated: 10,
+    status: "user",
+  },
+  {
+    id: 2,
+    name: "Jane Smith",
+    email: "jane.smith@example.com",
+    imageUrl: "/assets/images/david.webp",
+    dateJoined: formatDate("2025-01-02"),
+    itineraryCreated: 4,
+    status: "user",
+  },
+  {
+    id: 3,
+    name: "John Smith",
+    email: "john.smith@example.com",
+    imageUrl: "/assets/images/david.webp",
+    dateJoined: formatDate("2025-01-03"),
+    itineraryCreated: 8,
+    status: "admin",
+  },
+]
